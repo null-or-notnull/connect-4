@@ -104,7 +104,7 @@ public class Connect4{
             System.out.print(String.format("%2d",row));
 
         System.out.println();
-	}
+    }
     public static int readInput(int playerNum){
         System.out.print("Player "+playerNum+" type a column (0-6) or 9 to quit curent game: ");
         return scanner.nextInt();
