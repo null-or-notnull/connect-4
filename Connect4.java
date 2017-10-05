@@ -82,7 +82,7 @@ public class Connect4{
 
 		return false;
 	}
-	public static void drawBoard(){
+    public static void drawBoard(){
         for (int col = board.length-1; col >= 0; col--){
 
             System.out.print(String.format("%2d%2c",col,'|'));
