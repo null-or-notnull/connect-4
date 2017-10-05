@@ -4,6 +4,7 @@ public class Connect4{
     private static int [][] board;
     private static int col, row;
     private static Scanner scanner;
+    
     public static void main(String [] args){
         col = 6;
         row = 7;
@@ -27,6 +28,7 @@ public class Connect4{
         }
         System.out.println("The game is end");
     }
+
     public static int playerTurn(int playerNum){
         drawBoard();
         int input;
@@ -37,6 +39,7 @@ public class Connect4{
             return 9;
         return winCheck(storeInput(playerNum, input))?1:0;
     }
+
     public static int[] storeInput(int player, int pos){
         int start = 0;
         while(board[start][pos] != 0)
@@ -45,6 +48,7 @@ public class Connect4{
         int [] position = {start,pos};
         return position;
     }
+
     public static boolean winCheck(int [] cor){
         int upDown = 1+check(cor, new int []{1,0}, 0)+check(cor, new int []{-1,0}, 0);
         int leftRight = 1+check(cor, new int []{0,1}, 0)+check(cor, new int []{0,-1}, 0);
@@ -56,7 +60,6 @@ public class Connect4{
             
         return false;
     }
-
 
     public static int check(int [] p, int [] c, int count){
         int preR = p[0];
@@ -81,7 +84,8 @@ public class Connect4{
 			System.out.println("invaild input , please input again !!");
 
 		return false;
-	}
+    }
+
     public static void drawBoard(){
         for (int col = board.length-1; col >= 0; col--){
 
