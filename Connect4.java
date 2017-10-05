@@ -46,21 +46,14 @@ public class Connect4{
         return position;
     }
     public static boolean winCheck(int [] cor){
-        //System.out.println(cor[0]+" : "+cor[1]);
         int upDown = 1+check(cor, new int []{1,0}, 0)+check(cor, new int []{-1,0}, 0);
         int leftRight = 1+check(cor, new int []{0,1}, 0)+check(cor, new int []{0,-1}, 0);
         int lurd = 1+check(cor, new int []{1,-1}, 0)+check(cor, new int []{-1,1}, 0);
         int ruld = 1+check(cor, new int []{1,1}, 0)+check(cor, new int []{-1,-1}, 0);
 
-        // System.out.println("*************");
-        // System.out.println(upDown);
-        // System.out.println(leftRight);
-        // System.out.println(lurd);
-        // System.out.println(ruld);
-        // System.out.println("*************");
-
         if (upDown > 3 || leftRight > 3 || lurd > 3 || ruld > 3)
             return true;
+            
         return false;
     }
 
